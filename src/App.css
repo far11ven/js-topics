@@ -9,19 +9,6 @@
   transform: scale(2);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @media (min-width: 988px) {
   .item-body {
     max-width: 684px;

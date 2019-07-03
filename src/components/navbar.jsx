@@ -10,7 +10,11 @@ class Navbar extends Component {
               <div className="input-group-prepend">
                 <span className="input-group-text" id="basic-addon1">
                   <a href="/">
-                    <img src="./favicon.png" className="app-logo" />
+                    <img
+                      alt="app logo"
+                      src="./favicon.png"
+                      className="app-logo"
+                    />
                   </a>
                 </span>
               </div>
