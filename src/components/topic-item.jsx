@@ -7,7 +7,8 @@ const TopicItem = props => {
       style={{
         padding: "2px",
         backgroundColor: "lightblue",
-        border: "1px black solid"
+        border: "1px black solid",
+        overflowWrap: "break-word"
       }}
     >
       <span> {props.item.title}</span>

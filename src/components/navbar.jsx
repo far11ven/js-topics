@@ -4,7 +4,7 @@ class Navbar extends Component {
   render() {
     return (
       <React.Fragment>
-        <nav className="navbar navbar-dark bg-dark .navbar-fixed-top">
+        <nav className="navbar navbar-dark bg-dark navbar-fixed-top">
           <form className="form-inline">
             <div className="input-group">
               <div className="input-group-prepend">

@@ -10,12 +10,16 @@ class Home extends Component {
   };
 
   componentDidMount() {
+    this.handleGetTopic();
+  }
+
+  handleGetTopic = () => {
     axios.get(Config.API.GET_TOPIC).then(response => {
       let newTopicItems = this.state.topicList.splice();
       newTopicItems = newTopicItems.concat(response.data.result);
       this.setState({ topicList: newTopicItems });
     });
-  }
+  };
 
   handleSubmit = event => {
     event.preventDefault();
@@ -32,9 +36,8 @@ class Home extends Component {
       .then(response => {
         console.log("POST respose", response);
         if (response.status === 200) {
-          this.showToastMessage(
-            "Topic saved successfully!! Refresh to see updated list."
-          );
+          this.showToastMessage("Topic saved successfully!!");
+          this.handleGetTopic();
         }
       });
   };
@@ -45,7 +48,7 @@ class Home extends Component {
 
     setTimeout(function() {
       document.getElementById("toast").style.display = "none";
-    }, 10000);
+    }, 5000);
   }
 
   handleInputChange = event => {
